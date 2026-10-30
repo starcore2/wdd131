@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Apply JavaScript example</title>
+  </head>
+  <body>
+    <button>Click me</button>
+<script>
+  // JavaScript goes here
+  //just right before the closing body tag.
+  function createParagraph() {
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
+  document.body.appendChild(para);
+}
+
+const buttons = document.querySelectorAll("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
+}
+</script>
+  </body>
+</html>
+
+This line of of code creates a <p>You clicked the button!</p>
+every time it's run.
+
+java script is case senstive and will just break if not correct case.
+
+A better way to do this is to make a script file instead.
+<script type="module" src="script.js"></script>
+This links to the script file 
+and so 
+function createParagraph() {
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
+  document.body.appendChild(para);
+}
+
+const buttons = document.querySelectorAll("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
+}
+can be in the script.js file instead of html. same reason why we don't put all css in the html file. 
+less mess, 
+cleaner code,
+less fighting against the code misbeahving.
+
+Save and refresh your browser. 
+You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of Cross-origin request blocked. 
+That's because like many external resources, JavaScript modules need to be loaded from the same origin as the HTML, and file:// URLs don't qualify. 
+There are two solutions to fix this problem:
+
+Our recommended solution is to set up a local testing server. 
+With the server program running and serving the apply-javascript-external.html and script.js files on port 8000, open your browser and go to http://localhost:8000.
+If you cannot run a local server, you can also use <script defer src="script.js"></script> instead of <script type="module" src="script.js"></script>. 
+See Script loading strategies below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
+
+So odds are you probably will need to use the fiver server to load the webpage instead of intergreated termial file.
+
+html can call javascript code but it's a terrible idea to do so due to onclick spam.
+
+instead make a event listener 
+
+const buttons = document.querySelectorAll("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
+}
+
+HTML loads things in the order it shows up.
+
+Either put the javescript code at the bottom 
+
+or use the module script tag to tell the code to wait loading this until html is done loading.
+
+scripts will execute before html is parsed so it can cause the code to call on nothing and break.
+defer tag is when you don't need html to be ready on the async
+For external scripts, you should add the defer (or if you don't need the HTML to be ready, the async) attribute on the <script> element.
+For internal scripts, you should wrap the code in a DOMContentLoaded event listener.
+
+// one line comment
+
+/*
+Multi 
+line 
+comment
+*/
+
+comments should explain things simplely
+
+
+const means variable can't be reassigned. Once a variable is set, for example value 1 it means it's value 1. However, for example if it was an object, we can change the inside of the object but not the value
+
+let is when we do care about changing the value for later.
+
+string is a set of character often used for letters and is treated as a single unit.
+
+"101" is a string
+101 is an integer 
+true is boolean
+null is null
+undefined is undefined
+
+The most common method to wrap strings is 
+'' or ""
+`` can be used but rare and instead is used for something else
+Html often has "" 
+so devs to tend to use '' for java to help identify different types
+
+
+let name = 'Alicia';
+let age = 25;
+let message = `My name is ${name} and I am ${age} years old.`;
+
+Template literals are string literals that allow embedded expressions. 
+They are enclosed by backticks (`) instead of single or double quotes.
+Template literals can contain placeholders, which are indicated by a dollar sign and curly braces ${expression}. 
+

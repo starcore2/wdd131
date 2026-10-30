@@ -1,0 +1,7 @@
+Lower case only
+No spaces
+use - instead
+No special characters. They break things
+Semantic names. this-item.html not 89176034896701934857610938457103498671347.pjeg
+Folders should hold items to use for later.
+
