@@ -85,7 +85,6 @@ h2,
 
 
 
-
 body {
     background-color: var(--alt-background-color);
     color: var(--alt-text-color);
@@ -100,6 +99,10 @@ footer {
     text-align: center;
     background-color: var(--darkerbackground);
     width: 100%;
+}
+
+header {
+    font-weight: 700;
 }
 
 footer {
