@@ -4,27 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - William Zacher</title>
+    <meta name="description"
+        content="A home page for William Zacher, who is learning from the class WDD 131 - Dynamic Web Fundamentals">
+    <meta name="">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="scripts/getdates.js" async="defer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Header Content</h1>
+        <span id="course-title">
+            <p>WDD 131 - Dynamic Web Fundamentals</p>
+        </span>
+
         <nav>
-            <a href="">a</a>
-            <a href="">b</a>
-            <a href="">c</a>
-            <a href="">d</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/.">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng">Matthew</a>
+            <a>Final Project</a>
+            <!-- href is deleted to disable security error that it throws at me. -->
         </nav>
     </header>
     <main>
-        <h1>Main Content</h1>
+        <h1>
+            William Zacher
+        </h1>
+        <section class="card" id="lore-of-me">
+            <h2>About Me</h2>
+            <div id="about-me">
+                <p>
+                    Greetings I'm deaf adult that can hear thanks to my cochlear implants. I have lived in Oklahoma for
+                    my entire life but I have been to many of the states. Mostly the west instead of the east. I been to
+                    many of the national parks ranging from the grand canyon to yellowstone park. Also been on two
+                    cruise ships. Thanks to my grandparents having the time to take me there.
+                </p>
+                <img src="images/profile.jpeg" alt="A photo of William Zacher" class="float-right">
+            </div>
+            <div id="about-ok">
+                <h3>Oklahoma, United States of America</h3>
+                <img src="images/flag_of_oklahoma.png" alt="Flag of Oklahoma" class="float-left">
+                <p>
+                    Oklahoma is the 46th state of United State of America. It's a southern state with often flat areas.
+                    Often has a comical amount of tornados. I have seen a few tornados and people getting out of cars to
+                    watch the tornados.
+                    I have been all over my state going from modern cities to you can feel the rural influences. My
+                    family tends to live a modern life as even in the more rural areas I can see technology creep in.
+                    Also planes I lived so close to many plane areas.
+                </p>
+            </div>
+        </section>
+        <section class="card" id="resources">
+            <h2>
+                Web Dev Resources
+            </h2>
+            <ul>
+                <li><a href="https://dev.to/">
+                        Dev.to Community
+                    </a></li>
+                <li><a href="https://www.smashingmagazine.com/">
+                        Smashing Magazine
+                    </a></li>
+                <li><a href="https://css-tricks.com/">
+                        CSS Tricks
+                    </a></li>
+                <li><a href="https://www.w3schools.com/">
+                        W3 Schools
+                    </a></li>
+                <li><a href="https://www.udemy.com/">
+                        Udemy
+                    </a></li>
+                <li><a href="https://picsum.photos/">
+                        Lorem Picsum Image Placeholder
+                    </a></li>
+            </ul>
+        </section>
     </main>
-    <aside>
-        <h1>Aside Content</h1>
-    </aside>
     <footer>
-        <h1>Footer Content</h1>
+        <p>©<span id="current-year"></span> - William Zacher - United States of America</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 

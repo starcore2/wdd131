@@ -1,0 +1,201 @@
+/* 
+    IDS
+    Picks certain elements
+    starts with #
+    #about-ok
+    #about-me
+    #lore-of-me
+    #course-title
+    #current-year
+
+
+*/
+/* 
+    CLASSES
+    Common designs
+    Start with .
+    .card
+    .float-left
+    .float-right
+
+*/
+
+:root {
+    /* --variable: value; */
+    /* to grab variable use 
+    value: var(--variable);
+    it acts like the value so very helpful 
+     */
+    --different-box-color: white;
+    --normal-background-color: rgb(200, 200, 200);
+    --normal-text-color: black;
+    --bright-colorful-background: rgb(169, 255, 255);
+    --link-background-color: rgb(0, 0, 0);
+    --link-text-color: rgb(255, 255, 255);
+    --link-hover-color: white;
+    --link-hover-text: black;
+    --alt-background-color: rgb(80, 80, 80);
+    --alt-text-color: white;
+    --font-family-normal: "Nunito", arial, trebuchet, comic, sans-serif;
+    --font-family-fancy: "Jim Nightshade", cursive, times, georgia, serif;
+    --darkerbackground: rgb(44, 44, 44);
+}
+
+/* .jim-nightshade-regular {
+    font-family: "Jim Nightshade", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nunito {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#course-title p {
+    font-family: var(--font-family-fancy);
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2,
+#course-title {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+body {
+    background-color: var(--alt-background-color);
+    color: var(--alt-text-color);
+    display: block;
+}
+
+
+
+header p,
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--darkerbackground);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--link-background-color);
+    width: 100%;
+}
+
+nav a {
+
+    color: var(--link-text-color);
+    text-decoration: none;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: var(--link-hover-color);
+    color: var(--link-hover-text);
+}
+
+main {
+    color: var(--normal-text-color);
+    /* margin: 16px auto; */
+    padding: 32px 8px;
+    background-color: var(--normal-background-color);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    max-width: 1200px;
+    justify-self: center;
+    margin: auto auto;
+}
+
+main h1 {
+    grid-column: span 2;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+h3 {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 8px;
+    border: 5px solid blue;
+    border-radius: 10px;
+    background-color: var(--different-box-color);
+}
+
+.card h2 {
+    text-align: center;
+    border-bottom: 5px solid black;
+    margin: 0 auto auto;
+    width: 100%;
+    background-color: var(--bright-colorful-background);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card * {
+    padding: 1px;
+    margin: 0 16px;
+}
+
+img {
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 1em;
+}
+
+#about-me {
+    display: grid;
+    grid-template-columns: 4fr auto;
+}
+
+#about-me h2 {
+    grid-column: span 2;
+}
+
+#about-ok h3 {
+    margin: 8px auto;
+    text-align: right;
+}
