@@ -1,0 +1,28 @@
+:root {
+    --background-color: rgb(183, 226, 255);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 640px;
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    background-color: white;
+}

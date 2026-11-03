@@ -1,0 +1,17 @@
+css media queries allow mobile screens to not look ugly. 
+Syntax for setting up a css media query
+
+@media not|only mediatype and (expressions) {
+    /*Css rules go here inside the @media query's opening and closing curly brackets {}*/
+}
+
+for example
+
+@media screen and (min-width: 640px) {   /* this is the line that tells css to start checking when to applies rules. in this case, the view port needs to be a screen and at least 640 px wide */
+    h1 { /* selecter css rule you know this if you forgor, well it's picking the h1 value IF the above condition is true. */
+        font-size: 2.5rem; /* the rules that activate when conditions are true */
+        margin: 1rem;
+        color: navy;
+    } 
+} /* Seals the box */
+
