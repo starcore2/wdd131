@@ -91,6 +91,11 @@ ul {
 
 }
 
+nav {
+    display: flex;
+    justify-content: end;
+}
+
 nav a {
     display: none;
     width: 100px;
