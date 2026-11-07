@@ -1,0 +1,79 @@
+Document.querySelector() is the recommended modern approach. 
+    It is convenient because it allows you to select elements using CSS selectors. 
+    The above querySelector() call will match the first <a> element that appears in the document. 
+    If you wanted to match and do things to multiple elements, you could use Document.querySelectorAll(), which matches every element in the document that matches the selector, and stores references to them in an array-like object called a NodeList.
+
+DOM looks very similar to a regular html tree structure without closing tags mostly because it uses indentation to grow the tree.
+
+Root is top 
+    child is a node direcetly under another node  
+    descendant node so everything is a descendant of a root but not every node is a child of a root node
+    parent node contain child nodes 
+    Siblings have nodes on the same layer under the same parent.
+
+Document.querySelectorAll()
+    this will make an array of the selected value. you could do many things to multiple nodes 
+
+You could  also use 
+    Document.getElementById(),
+    anything with the ID
+    Document.getElementsByTagName(),
+    an array of all of the same type. 
+
+    upside works in older browsers, but it's not as convenient to use.
+
+Methods to modify documents. 
+    Document.createElement()
+        We can create anything the html knows how to use.
+    Node.appendChild()
+        This allows us to put the recently created object and place it in it's right place.
+
+example
+    const sect = document.querySelector("section");
+    const para = document.createElement("p");
+    para.textContent = "We hope you enjoyed the ride.";
+    sect.appendChild(para);
+    const text = document.createTextNode(
+         " — the premier source for web development knowledge.",
+    );
+    const linkPara = document.querySelector("p");
+    linkPara.appendChild(text);
+
+Note that creating a child just tends to mean that's a variable that can be moved around with 
+    sect.appendChild(linkPara);
+however if you want to remove a node
+    sect.removeChild(linkPara);
+    Would be used instead. 
+Another way to remove the node of just self reference, 
+    linkPara.remove();
+    this allows us to delete that node as well. 
+    However it's not supported in older browsers so you will have to do something very silly like 
+    linkPara.parentNode.removeChild(linkPara);
+    to pretty much tell it to reference the parent to remove the child of that parent of it's self.
+
+To Manipulate a style sheet.
+    you could get an array of CSSStyleSheet objects with
+    Document.styleSheets.
+    However, we got a better way to do this.
+    first things we do HTMLElement.style
+        para.style.color = "white";
+        para.style.backgroundColor = "black";
+        para.style.padding = "10px";
+        para.style.width = "250px";
+        para.style.textAlign = "center";
+    This allows us to quickly style things with a selector that we have created earlier.
+    the page will have 
+        <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
+            We hope you enjoyed the ride.
+        </p>
+    The code applied the style directly to the object.
+    Another method is to instead use a stylesheet and make classes for the style groups we want to use. 
+    For example .fish can be just added to multiple things without need to reuse code often.
+
+    para.classList.add("highlight");
+
+    You modify the styles by using classList 
+
+preventDefault() is a method to deny the form asking the page to refresh. 
+
+focus() allows us to yoink the input so the next input can just start.

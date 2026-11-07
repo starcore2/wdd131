@@ -1,0 +1,156 @@
+:root {
+    /* --variable: value; */
+    /* to grab variable use 
+    value: var(--variable);
+    it acts like the value so very helpful 
+     */
+    --different-box-color: white;
+    --normal-background-color: white;
+    --normal-text-color: black;
+    --bright-colorful-background: rgb(169, 255, 255);
+    --link-text-color: rgb(255, 255, 255);
+    --link-hover-color: rgb(236, 196, 255);
+    --link-hover-text: black;
+    --alt-text-color: white;
+    --font-family-normal: "Roboto", arial, trebuchet, comic, sans-serif;
+    --font-family-fancy: times, georgia, serif;
+    --darkerbackground: rgb(47, 0, 68);
+}
+
+/* 
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#course-title p {
+    font-family: var(--font-family-fancy);
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+body {
+    color: var(--alt-text-color);
+    display: block;
+}
+
+
+
+header,
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--darkerbackground);
+    width: 100%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-weight: 700;
+}
+
+header span {
+    font-size: 2rem;
+}
+
+#course-title {
+    display: block;
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+
+}
+
+nav a {
+    display: none;
+    width: 100px;
+    color: var(--link-text-color);
+    text-decoration: none;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: var(--link-hover-color);
+    color: var(--link-hover-text);
+}
+
+#menu {
+    padding: 8px;
+    max-width: 100px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✕"
+}
+
+.open a {
+    display: block;
+}
+
+main {
+    color: var(--normal-text-color);
+    /* margin: 16px auto; */
+    padding: 32px 8px;
+    background-color: var(--normal-background-color);
+    margin: auto auto;
+    max-width: 950px;
+}
+
+main h1 {
+    grid-column: span 2;
+}
+
+
+
+.templegroup {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+}
+
+figure {
+    text-align: center;
+}
+
+
+img {
+    max-width: 300px;
+    max-height: 200px;
+}

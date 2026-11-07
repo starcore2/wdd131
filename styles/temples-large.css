@@ -1,0 +1,41 @@
+@media screen and (min-width: 650px) {
+    #menu {
+        display: none;
+    }
+
+    .templegroup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 624px;
+        margin: auto auto;
+    }
+
+    nav a {
+        display: block;
+        width: 100px;
+    }
+
+    header {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    figure {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    #menu {
+        display: none;
+    }
+
+    .templegroup {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0;
+    }
+
+    figure {
+        margin: 0;
+    }
+}

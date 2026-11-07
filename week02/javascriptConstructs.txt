@@ -1,0 +1,383 @@
+Assignment Operators
+They assign a value to a variable.
+
+    1 Operator
+    2 Description
+    3 Example
+    4 Same As
+
+    1 =
+    2 Assigns a value to a variable
+    3 x = y
+    4 x = y
+
+    1 +=
+    2 Adds a value to a variable
+    3 x += y
+    4 x = x + y
+
+    1 -=
+    2 Subtracts a value from a variable
+    3 x -= y
+    4 x = x - y
+
+    1 *=
+    2 Multiplies a variable by a value
+    3 x *= y
+    4 x = x * y
+
+    1 /=
+    2 Divides a variable by a value
+    3 x /= y
+    4 x = x / y
+
+    1 %=
+    2 Assigns a remainder to a variable
+    3 x %= y
+    4 x = x % y
+
+    1 **=
+    2 Exponentiates a variable by a value
+    3 x **= y
+    4 x = x ** y
+
+    1 &&=
+    2 Logical AND assignment
+    3 x &&= y
+    4 x = x && y
+
+    1 ||=
+    2 Logical OR assignment
+    3 x ||= y
+    4 x = x || y
+
+Arithmetic Operators.
+Their job is to do m a t h. 
+
+
+    1 Operator
+    2 Description
+    3 Example
+    4 Same As
+
+    1 +
+    2 Addition
+    3 x + y
+    4 x + y
+
+    1+1=2
+
+    1 -
+    2 Subtraction
+    3 x - y
+    4 x - y
+
+    2-1=1
+
+    1 *
+    2 Multiplication
+    3 x * y
+    4 x * y
+
+    3*3=9
+
+    1 /
+    2 Division
+    3 x / y
+    4 x / y
+
+    12/3 = 4
+
+    1 %
+    2 Modulus (Remainder)
+    3 x % y
+    4 x % y
+
+    10%5 = 0
+    12%5 = 2
+    a way to think of this 
+    using 5 as the base
+    1 = 1
+    2 = 2
+    3 = 3
+    4 = 4 
+    5 = 0
+    6 = 1
+    7 = 2
+    8 = 3
+    9 = 4
+    10 = 0
+    it cycles.
+
+    1 **
+    2 Exponentiation
+    3 x ** y
+    4 x ** y
+
+    you know the drill for this one.
+
+    3**3 is 3 to the power of 3
+    3*3*3
+
+
+Comparison Operators
+
+Their job is to compare values and return either true or false
+
+
+    1 Operator
+    2 Description
+    3 Example
+    4 Returns
+
+    1 ==
+    2 Equal to
+    3 x == y
+    4 true if x is equal to y
+
+    1 ===
+    2 Strict equal to
+    3 x === y
+    4 true if x is equal to y and they are of the same data type
+
+    1 !=
+    2 Not equal to
+    3 x != y
+    4 true if x is not equal to y
+
+    1 !==
+    2 Strict not equal to
+    3 x !== y
+    4 true if x is not equal to y or they are of different types
+
+    1 <
+    2 Less than
+    3 x < y
+    4 true if x is less than y
+
+    1 <=
+    2 Less than or equal to
+    3 x <= y
+    4 true if x is less than or equal to y
+
+Logical Operators
+
+Logical operators are used to combine multiple boolean expressions and return a boolean value based on the compounded logical operation.
+
+    1 Operator
+    2 Description
+    3 Example
+    4 Returns
+
+    1 &&
+    2 Logical AND
+    3 x && y
+    4 true if both x and y are true
+
+    1 ||
+    2 Logical OR
+    3 x || y
+    4 true if either x or y is true
+
+    1 !
+    2 Logical NOT
+    3 !x
+    4 true if x is false; false if x is true
+
+Types of Expressions
+
+    Arithmetic Expressions: These expressions involve arithmetic operators (such as +, -, *, /) to perform mathematical calculations.
+
+    let result = (5 + 3) * 2;
+
+    String Expressions: These expressions involve string concatenation or manipulation using the + operator or string methods.
+
+    let greeting = "Hello, " + "world!";
+
+    Logical Expressions: These expressions use logical operators (such as &&, ||, !) to evaluate boolean values.
+
+    let isAdult = age >= 18 && hasID;
+
+Conditional structures are used to make decisions in programming. They allow the program to execute different blocks of code based on whether a specified condition is true or false. The most common conditional structures in JavaScript are the if / else if / else statement and the switch statement.
+
+    if statement: Executes a block of code if a specified condition is true.
+
+    if (condition) {
+      // Code to execute if the condition is true
+    }
+
+    The condition is evaluated to a boolean value, i.e., true or false.
+
+    If the condition is true, the code block inside the if statement is executed. If it is false, the code block is skipped.
+        Example:
+
+            let age = 20;
+            if (age >= 18) {
+            console.log("Price: Adult — you pay full price.");
+            }
+
+    else statement: Provides an alternative block of code to execute if the condition in the if statement is false.
+
+        if (condition) {
+        // Code to execute if the condition is true
+        } else {
+        // Code to execute if the condition is false
+        }
+
+        Example:
+
+            let age = 16;
+            if (age >= 18) {
+            console.log("Price: Adult — you pay full price.");
+            } else {
+            console.log("Price: Child — you get a discount.");
+            }
+
+    else if statement: This structure allows for the checking of multiple conditions in sequence.
+
+        if (condition1) {
+        // Code to execute if condition1 is true
+        } else if (condition2) {
+        // Code to execute if condition2 is true
+        } else {
+        // Code to execute if none of the conditions are true
+        }
+
+        Example:
+
+            let age = 65;
+            if (age < 13) {
+            console.log("Price: Child — you get a discount.");
+            } else if (age <= 64) {
+            console.log("Price: Adult — you pay full price.");
+            } else {
+            console.log("Price: Senior — you get a discount.");
+            }
+
+    Switch Statements: Provides a way to execute selective blocks of code based on the value of an expression.
+
+        switch (expression) {
+        case value1:
+            // Code to execute if expression is equal to value1
+            break;
+        case value2:
+            // Code to execute if expression is equal to value2
+            break;
+        // ... more cases ...
+        default:
+            // Code to execute if none of the cases match
+        }
+
+        Example:
+
+            let day = 3;
+            switch (day) {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            default:
+                console.log("Another day");
+            }
+
+Loops
+
+Loops are used to repeat a block of code multiple times until a specified condition is met. The most common ways to loop in JavaScript are the for loop, the while loop, the for...of and for...in loops, and the array forEach method.
+
+    for Loop: Repeats a block of code a specified number of times.
+
+        for (let i = 0; i < 10; i++) {
+        // Code to execute in each iteration
+        }
+
+        Example:
+
+        for (let i = 0; i < 5; i++) {
+        console.log("Iteration number: " + i);
+        }
+
+    while Loop: Repeats a block of code as long as a specified condition is true.
+
+        while (condition) {
+        // Code to execute while the condition is true
+        }
+
+        Example:
+
+        let count = 0;
+        while (count < 5) {
+        console.log("Count is: " + count);
+        count++;
+        }
+
+    forEach Loop: Used with arrays; it iterates over each element of the array.
+
+        array.forEach(function(element) {
+        // Code to execute for each element
+        });
+
+        Example:
+
+        let fruits = ["apple", "banana", "cherry"];
+        fruits.forEach(function(fruit) {
+        console.log("Fruit: " + fruit);
+        });
+
+    for...of Loop: Iterates over the values of an iterable, such as an array or a string.
+
+        let fruits = ["apple", "banana", "cherry"];
+        for (const fruit of fruits) {
+        console.log("Fruit: " + fruit);
+        }
+
+    for...in Loop: Iterates over the keys (property names) of an object, or the indexes of an array.
+
+        let student = { name: "Ana", score: 42 };
+        for (const key in student) {
+        console.log(key + ": " + student[key]);
+        }
+
+
+more examples of how to use loops
+
+
+    Check Your Understanding – Example Answers
+
+    These answers are certainly not exhaustive.
+
+
+        // for loop
+        for (let i = 0; i < studentReport.length; i++) {
+            if (studentReport[i] < LIMIT) {
+            console.log(studentReport[i]);
+            }
+        }
+        
+        // while loop
+        let i = 0;
+        while (i < studentReport.length) {
+            if (studentReport[i] < LIMIT) {
+            console.log(studentReport[i]);
+            }
+            i++;
+        }
+        
+        // forEach loop
+        studentReport.forEach(function (item) {
+            if (item < LIMIT) {
+            console.log(item);
+            }
+        });
+        
+        // for...in loop
+        for (let i in studentReport) {
+            if (studentReport[i] < LIMIT) {
+            console.log(studentReport[i]);
+            }
+        }
+
