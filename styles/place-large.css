@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --font-family-normal: Arial, Helvetica, sans-serif;
     --base-background-color: #0073CF;
     --alt-one-color: #9A3B26;
@@ -8,7 +8,7 @@
     --base-padding: 16px;
     --base-margins: auto auto;
     --border-bottom-testing: 10px solid
-}
+} */
 
 @media screen and (min-width: 535px) {
     main {
