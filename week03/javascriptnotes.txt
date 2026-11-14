@@ -1,0 +1,96 @@
+Array Methods
+
+Arrays have several methods that can manipulate (change) them:
+
+scores.push(100); // Adds a new element to the end of the array
+
+scores.pop(); // Removes the last element from the array
+
+scores.shift(); // Removes the first element from the array
+
+scores.unshift(100); // Adds a new element to the beginning of the array
+
+scores.slice(2,3); // Returns a shallow copy from the start index up to, but not including, the end index
+
+scores.splice(2, 1); // Removes 1 element from the array starting at index 2
+
+scores.join(', '); // Transforms the array into a single string using a comma and space as the delimiter
+
+    Reference JavaScript Arrays Reference – MDN 
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+
+Defining functions
+    Function declarations
+
+    A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+
+        The name of the function.
+        A list of parameters to the function, enclosed in parentheses and separated by commas.
+        The JavaScript statements that define the function, enclosed in curly braces, { /* … */ }.
+
+    For example, the following code defines a function named square:
+    js
+    Copy
+
+    function square(number) {
+    return number * number;
+    }
+
+function myFunc(theObject) {
+  theObject.make = "Toyota";
+}
+The function square takes one parameter, called number. The function consists of one statement that says to return the parameter of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function, which is number * number.
+
+Parameters are essentially passed to functions by value — so if the code within the body of a function assigns a completely new value to a parameter that was passed to the function, the change is not reflected globally or in the code which called that function.
+
+When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function, as shown in the following example:
+const myCar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
+
+console.log(myCar.make); // "Honda"
+myFunc(myCar);
+console.log(myCar.make); // "Toyota"
+
+Function declarations and expressions can be nested, which forms a scope chain. For example:
+
+    function addSquares(a, b) {
+    function square(x) {
+        return x * x;
+    }
+    return square(a) + square(b);
+    }
+
+Function expressions
+
+    While the function declaration above is syntactically a statement, functions can also be created by a function expression.
+Such a function can be anonymous; it does not have to have a name. For example, the function square could have been defined as:
+
+    const square = function (number) {
+    return number * number;
+    };
+
+    console.log(square(4)); // 16
+
+However, a name can be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces:
+
+    const factorial = function fac(n) {
+    return n < 2 ? 1 : n * fac(n - 1);
+    };
+
+    console.log(factorial(3)); // 6
+
+Function expressions are convenient when passing a function as an argument to another function. 
+
+All of the above is defining the function.
+
+To call a function you need to call it's name
+
+for example function square needs to have it called like square(5)
+
+A function can call it self.
+

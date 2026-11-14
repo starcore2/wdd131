@@ -1,0 +1,18 @@
+Make sure the images look good at all screen size.
+
+You may need multiple copies of an images to help reduce the data demand on mobile.
+
+it will take up more space on the dev back end if you want to cater for mobile.
+
+Horizontal scroll is bad
+vertical scroll only. Unless you really want to mess with people.
+
+Only one scroll type. And vertical is the scroll type we are working with.
+
+srcset is the method to chooses a correct size to deliver.
+
+<picture>
+  <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+  <source srcset="images/hero-medium.webp" media="(min-width: 550px)">
+  <img src="images/hero-small.webp" alt="Orem Utah Temple" width="400" height="200">
+</picture>

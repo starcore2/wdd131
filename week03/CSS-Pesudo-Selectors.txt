@@ -1,0 +1,15 @@
+Pseudo classes/elements can extend what selectors can target.
+classes target stuff such as user interactions such as hovering over a button
+elements instead target a part of an element such as the first letter or line of a paragraph.
+
+:root is a pseudo class and it's valuable for declaring global css variables
+
+example classes
+:root, used for highest level values. best for variables.
+:focus can detect if something has user focus such as a text box.
+:not just is a negation
+:placeholder-shown shows up 
+
+::
+is best practice for pseudo elements
+

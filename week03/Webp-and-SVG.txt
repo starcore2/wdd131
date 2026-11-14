@@ -1,0 +1,13 @@
+WebP is for image compression
+SVG is for very sharp logos at any size.
+
+Lossless is compression used without damaging the original image.
+lossy compression is willing to nuke pixels permenatly for even smaller files.
+    for example jpg is a lossy compression and it merges colors from the other pixels to reduce the file size by using less colors.
+transparency is an Alpha channel to allow images to have something behind go through.
+
+PNG/JPEG/GIF all have poorer performance compared to newer formats but in return supports better browser supports for older versions.
+
+
+SVG are so tiny because it litteraly is just a set of instructions to tell the computer how to draw the image.
+

@@ -1,0 +1,61 @@
+Typography is fonts
+    at most use three fonts. Two fonts should be plenty for most cases. 
+    Use fonts that are easy to read and look nice.
+    Only include weights you need for performance.
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    base font size should be 16px
+
+    line height should be about 1.5
+
+    line length should be roughly 45-75 characters
+
+Colors 
+    should look nice and have less than five hues
+    Test color contrast to ensure readability. 
+    AA needs 4.5:1 for body text, 3:1 for large, and AAA needs 7:1
+
+Clarity
+    Keep the design clean and uncluttered. Use ample whitespace to guid focus and control information flow. 
+    KISS
+    Keep
+    It 
+    Simple
+    Stupid
+    Visuals help with information flow.
+
+Consistency
+    Make sure the visual language does not go chaotic. You are not skilled enough yet to break that rule.
+
+Visual Hierarchy
+    Make sure that people can understand the information flow.
+    Titles should be big to help guid eyes.
+
+Accessiblity
+    Make sure the site can be used by everyone such as people who can't see as well.
+    Alt should inform, 
+
+Feedback
+    Make the site respond to people. Don't make it confusing on what can be clicked.
+    Aka don't do the average AD.
+
+User-Centric Design
+    What is this site for.
+
+Visual Appeal
+    make the site look good in general.
+
+AI tips. 
+    If an Ai can look at an screenshot, you can take one and ask it to see if it can complain about it constructively
+
+
+
+
+
+
+
+
+
+
+
