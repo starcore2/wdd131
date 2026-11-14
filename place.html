@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oklahoma</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Place Title</h1>
+    </header>
+    <main>
+        <div class="main-hero">
+            <picture>
+                <source media="(min-width: 535px)" srcset="images/Ouachita-Mountains.webp"
+                    alt="A photo of Oklahoma Mountains By Okiefromokla (old) at English Wikipedia - Transferred from en.wikipedia to Commons., Public Domain, https://commons.wikimedia.org/w/index.php?curid=4334421">
+                <img class="hero" src="images/Flag_of_Oklahoma.webp" alt="Flag of Oklahoma">
+            </picture>
+            <div id="data">
+                <h2>Data</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>
+                                Area:
+                            </th>
+                            <td>
+                                69,699 sq mi (180,519 km2)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Population:
+                            </th>
+                            <td>
+                                4,123,288
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Capital:
+                            </th>
+                            <td>
+                                Oklahoma City
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Languages:
+                            </th>
+                            <td>
+                                English, Choctaw, Cherokee
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Currency:
+                            </th>
+                            <td>
+                                United States Dollar $
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Time Zone:
+                            </th>
+                            <td>
+                                UTC-6:00 (Central)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Calling Code:
+                            </th>
+                            <td>
+                                +1
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Internet TLD:
+                            </th>
+                            <td>
+                                .gov
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="weather">
+                <h2>Weather</h2>
+                <img src="images/weather.svg" alt="Weather Icon">
+                <table>
+                    <tr>
+                        <th>
+                            Temperature:
+                        </th>
+                        <td id="temperature">
+                            N/A
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Conditions:
+                        </th>
+                        <td id="current-condition">
+                            N/A
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Wind:
+                        </th>
+                        <td id="wind-speed">
+                            N/A
+                        </td>
+                    </tr>
+                    <tr id="windchill">
+                        <th>
+                            Wind Chill:
+                        </th>
+                        <td id="windchill-data">
+                            N/A
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>©<span id="current-year"></span> - William Zacher - United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+:root {
+    --font-family-normal: Arial, Helvetica, sans-serif;
+    --base-background-color: #0073CF;
+    --alt-one-color: #9A3B26;
+    --alt-two-color: #B3995D;
+    --alt-three-color: #1D5C42;
+    --contrast-background-color: white;
+    --base-padding: 16px;
+    --base-margins: auto auto;
+    --border-bottom-testing: 10px solid
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-normal);
+}
+
+/* #windchill {
+    display: none;
+} */
+
+body {
+    text-align: center;
+}
+
+header,
+footer {
+    background-color: var(--base-background-color);
+    color: white;
+    padding: var(--base-padding);
+    margin: var(--base-margins);
+}
+
+header {
+    border-bottom: var(--border-bottom-testing) var(--alt-one-color);
+}
+
+.hero {
+    border-bottom: var(--border-bottom-testing) var(--alt-three-color);
+    border-top: var(--border-bottom-testing) var(--alt-two-color);
+    width: 100%;
+}
+
+#data {
+    border-bottom: 1px solid var(--alt-one-color);
+
+}
+
+#weather img {
+    width: 100px;
+}
+
+#data,
+#weather {
+    margin-bottom: 16px;
+    padding: var(--base-padding);
+}
+
+table {
+    margin: auto auto;
+}
+
+th {
+    text-align: right;
+}
+
+td {
+    text-align: left;
+}
