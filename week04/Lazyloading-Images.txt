@@ -1,0 +1,17 @@
+how to load images lazy style
+
+lazy loading means we don't load the image until the user scrolls to the location.
+
+
+
+First Meaningful Paint
+"It's important to deliver something meaningful to the user as soon as possible 
+— the longer they wait for the page to load, the bigger the chance they will leave before waiting for everything to finish. 
+We should be able to show them at least the basic view of the page they want to see, with placeholders in the places more content will eventually be loaded. This could be achieved by progressive loading 
+─ also known as Lazy loading. 
+This is all about deferring loading of as many resources as possible (HTML, CSS, JavaScript), and only loading those immediately that are really needed for the very first experience." ─ MDN
+
+
+<img src="images/anyphoto.jpg" alt="A good description of the non decorative image" loading="lazy" width="300" height="500">
+
+img defaults to using the loading="eager" instead of lazy. Lazy waits until the browser can see it before loading the image.

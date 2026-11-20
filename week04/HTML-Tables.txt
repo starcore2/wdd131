@@ -1,0 +1,4 @@
+tables are a good tool to display information.
+
+Do not use tables for page layout. Only for displaying information. You got CSS grid for that role.
+

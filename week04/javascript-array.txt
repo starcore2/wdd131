@@ -1,0 +1,51 @@
+W04 Learning Activity: JavaScript Array Functions
+Overview
+
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. 
+It is a declarative programming paradigm, which means you express your program through expressions or declarations rather than statements. 
+Array methods that support functional programming include filter(), map(), and reduce(). 
+While there are other array methods that support functional programming, this activity focuses on these three common and useful methods.
+
+
+Prepare
+array.filter()
+
+The array.filter() method creates a new array containing only elements that meet a specified condition.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+    Reference Array.filter() – MDN
+
+array.map()
+
+The array.map() method transforms each element of an array using a provided function and returns a new array with the transformed elements. The original array is not modified, and the new array has the same number of elements as the original.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    Reference Array.map() – MDN
+
+array.reduce()
+
+The array.reduce() method reduces an array to a single value by executing a reducer function on each element. The reducer function takes four arguments: accumulator, current value, current index, and source array. The function's returned value updates the accumulator, which is carried through each iteration and becomes the final result.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+    Reference Array.reduce() – MDN
+
+
+
+For all of these exercises, use this array declaration:
+
+let names = ['Nancy','Blessing','Jorge','Svetlana','Bob'];
+
+1. Using the array.filter() method, create an array named namesB with only those names from the names array that start with the character 'B'. 
+let namesB = names.filter(name => name[0] == 'B'); // This works
+ 
+Solution: let namesB = names.filter(name => name.charAt(0) === 'B'); //This is the example solution.
+
+2. Using the array.map() method, create a new array named namesLength that contains the length of each name in the names array. Expected output is [5, 8, 5, 8, 3]. 
+let nameL = names.map(word => word.length)
+
+Solution: let nameLengths = names.map((name) => name.length);
+3. Using the names.reduce() method, create an expression that returns the average string length of the names in the names array. Expected output is 5.8. 
+
+Solution:
+names.reduce((total, name) => total + name.length, 0) / names.length;
+The initial value for the accumulator is set to 0. Inside the reducer function, total represents the accumulated sum of string lengths, and name represents each individual name in the array.
+ The reducer function adds the length of each name to the total in each iteration (equivalent to total += name.length).
+
+4. refer to javascript-array.html
