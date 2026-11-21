@@ -89,8 +89,12 @@ const oldCheck = 1900;
 const newCheck = 2000;
 const largeCheck = 90000;
 const smallCheck = 10000;
-
-
+const homeButton = document.querySelector("#home"); //0
+const oldButton = document.querySelector("#old"); //1
+const newButton = document.querySelector("#new"); //2
+const largeButton = document.querySelector("#large"); //3
+const smallButton = document.querySelector("#small"); //4
+let state = 0 // This is to skip running code on an already sorted list
 
 burger_button.addEventListener('click', () => {
     burger_button.classList.toggle('open');
@@ -113,12 +117,12 @@ burger_button.addEventListener('click', () => {
 // area
 // img url
 
-let deckOfCards = ""
+let deckOfCards = "";
 function createTempleCards(templeArray) {
     /**
      * this converts the temple array into a card to display.
      */
-    let cardStock = ""
+    let cardStock = "";
     templeArray.forEach(element => {
         cardStock += `<div class="card">
         <h2 class="name">${element.templeName}</h2>
@@ -128,7 +132,7 @@ function createTempleCards(templeArray) {
         <img src="${element.imageUrl}" alt="A photo of ${element.templeName} Temple" loading="lazy">
     </div>`
     });
-    return cardStock
+    return cardStock;
 };
 
 function filterTemples(templeArrayValue, value, larger) {
@@ -155,7 +159,7 @@ function filterTemples(templeArrayValue, value, larger) {
 };
 
 function extractYear(templeDedicatedValue) {
-    return parseInt(templeDedicatedValue.dedicated)
+    return parseInt(templeDedicatedValue.dedicated);
     // Just in case I need to change the extraction method.
     //This should just grab the year if the internet is to be believed 
     // Parse should give up when it see the ,
@@ -167,27 +171,27 @@ function extractYear(templeDedicatedValue) {
 
 
 function newTempleArrayYear(templeArray, check, larger) {
-    let newTempleArray = []
+    let newTempleArray = [];
     templeArray.forEach(element => {
         if (filterTemples(extractYear(element), check, larger)) {
-            newTempleArray.push(element)
+            newTempleArray.push(element);
         }
     })
-    let newDeckOfCards = ""
+    let newDeckOfCards = "";
     newDeckOfCards = createTempleCards(newTempleArray);
-    return newDeckOfCards
+    return newDeckOfCards;
 }
 
 function newTempleArrayArea(templeArray, check, larger) {
     let newTempleArray = []
     templeArray.forEach(element => {
         if (filterTemples(element.area, check, larger)) {
-            newTempleArray.push(element)
+            newTempleArray.push(element);
         }
-    })
-    let newDeckOfCards = ""
+    });
+    let newDeckOfCards = "";
     newDeckOfCards = createTempleCards(newTempleArray);
-    return newDeckOfCards
+    return newDeckOfCards;
 }
 
 
@@ -202,3 +206,39 @@ deckOfCards = createTempleCards(temples);
 // deckOfCards = newTempleArrayArea(temples, smallCheck, false)
 
 templeInjectionSite.innerHTML = deckOfCards;
+
+homeButton.addEventListener('click', () => {
+    if (state != 0) {
+        state = 0;
+        deckOfCards = createTempleCards(temples);
+        templeInjectionSite.innerHTML = deckOfCards;
+    }
+});
+oldButton.addEventListener('click', () => {
+    if (state != 1) {
+        state = 1;
+        deckOfCards = newTempleArrayYear(temples, oldCheck, false);
+        templeInjectionSite.innerHTML = deckOfCards;
+    }
+});
+newButton.addEventListener('click', () => {
+    if (state != 2) {
+        state = 2;
+        deckOfCards = newTempleArrayYear(temples, newCheck, true);
+        templeInjectionSite.innerHTML = deckOfCards;
+    }
+});
+largeButton.addEventListener('click', () => {
+    if (state != 3) {
+        state = 3;
+        deckOfCards = newTempleArrayArea(temples, largeCheck, true);
+        templeInjectionSite.innerHTML = deckOfCards;
+    }
+});
+smallButton.addEventListener('click', () => {
+    if (state != 4) {
+        state = 4;
+        deckOfCards = newTempleArrayArea(temples, smallCheck, false);
+        templeInjectionSite.innerHTML = deckOfCards;
+    }
+});
