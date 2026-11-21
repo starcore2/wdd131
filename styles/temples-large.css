@@ -6,7 +6,7 @@
     .templegroup {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: 624px;
+        max-width: 616px;
         margin: auto auto;
     }
 
@@ -33,9 +33,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0;
+        max-width: 932px;
     }
 
-    figure {
-        margin: 0;
-    }
+
 }
