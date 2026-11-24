@@ -106,3 +106,7 @@ main {
 main article {
     margin-bottom: 16px;
 }
+
+.wireframe-img {
+    background-color: black;
+}
