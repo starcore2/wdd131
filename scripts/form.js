@@ -25,3 +25,6 @@ const products = [
         averagerating: 5.0
     }
 ];
+
+const product_list = document.querySelector("#product-name")
+
