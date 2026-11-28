@@ -40,9 +40,6 @@ function build_product_choices(product_array) {
 
 if (product_selector != null) {
     product_selector.innerHTML += build_product_choices(products);
-    // product_selector.addEventListener('click', () => {
-    //     product_selector.options[0].disabled = true;
-    // })
 }
 if (review_data != null) {
     let count_reviews = localStorage.getItem("visits");
