@@ -45,7 +45,33 @@ main {
     font-size: .9rem;
 }
 
+
+div {
+    margin-bottom: 20px;
+}
+
 #star-box {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    max-width: 400px;
+}
 
+label {
+    display: block;
+}
+
+input[type="radio"] {
+    min-width: 44px;
+    justify-self: center;
+}
+
+@media screen and (min-width: 800px) {
+    input[type="radio"] {
+        min-width: 22px;
+    }
+}
+
+input[type='submit'] {
+    padding: 10px 20px;
 }

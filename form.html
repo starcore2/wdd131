@@ -18,32 +18,53 @@
     </header>
     <main>
         <form action="review.html" method="get">
-            <label>
-                Product Name
+            <div>
+
+                <label for="product-name">
+                    Product Name
+                </label>
                 <select name="product-name" id="product-name" required>
                     <option value="" disabled>Choose a Product...</option>
                 </select>
-            </label>
-            <p>Overall Rating</p>
-            <div id="star-box">
-                <label>☆<input type="radio" name="rating" value="one-star" id="one-star" required></label>
-                <label>☆☆<input type="radio" name="rating" value="two-star" id="two-star" required></label>
-                <label>☆☆☆<input type="radio" name="rating" value="three-star" id="three-star" required></label>
-                <label>☆☆☆☆<input type="radio" name="rating" value="four-star" id="four-star" required></label>
-                <label>☆☆☆☆☆<input type="radio" name="rating" value="five-star" id="five-star" required></label>
             </div>
-            <label>Date of Installation <input type="date" required id="date-install"></label>
             <div>
-                <p>Which features did you find useful in the product?</p>
-                <label><input type="checkbox" name="Durability" value="useful-features">Durability</label>
-                <label><input type="checkbox" name="Ease of Use" value="useful-features">Ease of Use</label>
-                <label><input type="checkbox" name="Performance" value="useful-features">Performance</label>
-                <label><input type="checkbox" name="Design" value="useful-features">Design</label>
+
+                <p>Overall Rating</p>
+                <div id="star-box">
+                    <label for="one-star">☆</label>
+                    <label for="two-star">☆☆</label>
+                    <label for="three-star">☆☆☆</label>
+                    <label for="four-star">☆☆☆☆</label>
+                    <label for="five-star">☆☆☆☆☆</label>
+                    <input type="radio" name="rating" value="one-star" id="one-star" required>
+                    <input type="radio" name="rating" value="two-star" id="two-star" required>
+                    <input type="radio" name="rating" value="three-star" id="three-star" required>
+                    <input type="radio" name="rating" value="four-star" id="four-star" required>
+                    <input type="radio" name="rating" value="five-star" id="five-star" required>
+                </div>
             </div>
-            <label>Written Review <span class="optional">(Optional)</span>
-                <textarea id="written-review" name="written-review"></textarea></label>
-            <label>Your Name <span class="optional">(Optional)</span><input type="text" name="name-gift"
-                    id="name-gift"></label>
+            <div>
+                <label for="date-install">Date of Installation </label>
+                <input type="date" required id="date-install">
+            </div>
+            <div id="feature-box">
+                <p>Which features did you find useful in the product?</p>
+                <label><input type="checkbox" name="Durability" value="useful-features"> Durability</label>
+                <label><input type="checkbox" name="Ease of Use" value="useful-features"> Ease of Use</label>
+                <label><input type="checkbox" name="Performance" value="useful-features"> Performance</label>
+                <label><input type="checkbox" name="Design" value="useful-features"> Design</label>
+            </div>
+            <div>
+
+                <label for="written-review">Written Review <span class="optional">(Optional)</span>
+                </label>
+                <textarea id="written-review" name="written-review"></textarea>
+            </div>
+            <div>
+                <label for="name-gift">Your Name <span class="optional">(Optional)</span>
+                </label>
+                <input type="text" name="name-gift" id="name-gift">
+            </div>
             <input type="submit" value="Send Review">
         </form>
     </main>
