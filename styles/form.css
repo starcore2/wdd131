@@ -1,0 +1,51 @@
+:root {
+    --color-1: white;
+    --color-2: black;
+    --color-3: blue;
+    --base-font: Arial, Helvetica, sans-serif;
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--base-font);
+}
+
+input[type='radio'] {
+    min-height: 44px;
+}
+
+body {
+    background-color: var(--color-2);
+}
+
+main,
+header,
+footer {
+    max-width: 1000px;
+    margin: auto auto;
+    background-color: var(--color-1);
+    padding: 20px
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+header,
+main {
+    margin-bottom: 20px;
+}
+
+.optional {
+    color: var(--color-3);
+    font-size: .9rem;
+}
+
+#star-box {
+    display: grid;
+
+}

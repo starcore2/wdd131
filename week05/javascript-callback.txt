@@ -1,0 +1,55 @@
+Overview
+
+    Callback functions are a powerful feature of JavaScript, widely used in the language itself and in the browser. They are used to handle events, process data, and control the program's flow.
+
+Prepare
+
+    Reference Callback Functions – MDN
+    https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+        Callback function
+
+            A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+                The consumer of a callback-based API writes a function that is passed into the API. The provider of the API (called the caller) takes the function and calls back (or executes) the function at some point inside the caller's body. The caller is responsible for passing the right parameters into the callback function. The caller may also expect a particular return value from the callback function, which is used to instruct further behavior of the caller.
+
+                There are two ways in which the callback may be called: synchronous and asynchronous. Synchronous callbacks are called immediately after the invocation of the outer function, with no intervening asynchronous tasks, while asynchronous callbacks are called at some point later, after an asynchronous operation has completed.
+            This matters because 
+            sync means it will execute in a chain while
+            async means things can happen out of order which can result in invalid calculation.
+
+
+    Read this article which demonstrates the use of callback functions: Callback with built-in functions – devgenius.io
+
+Activity Instructions
+
+Given these function declarations:
+
+function calculate(a, b, callback) {
+  callback(a + b);
+}
+
+function displayResult(result) {
+  console.log('The result is: ' + result);
+}
+
+    Call the calculate function and pass it the arguments needed to produce the console output 2 + 3. Note that you will pass three arguments total: two numbers and a callback function. 
+
+A common use of callback functions in JavaScript is for asynchronous operations, such as handling events or making asynchronous requests. Here is a simulated example:
+
+function fetchData(callback) {
+  // using setTimeout to simulate fetching data from a server
+  setTimeout(() => {
+    // This calls the 'callback' function and passes data to it.
+    callback('Data has been fetched');
+  }, 2000); // This simulates a 2-second delay from a service.
+}
+
+// function that processes the data
+function processData(data) {
+  console.log("Data received:", data);
+}
+
+// Call the fetchData function and pass the processData function as an argument.
+fetchData(processData);
+
+The fetchData function simulates server data fetching using setTimeout to create a 2-second delay. After the delay, it invokes the callback function, passing 'Data has been fetched' as an argument. 
+In this example, processData is passed as the callback, and it logs the received data to the console when invoked.

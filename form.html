@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Week 5 - William Zacher</title>
+    <meta name="description" content="Form building practice and assignment for week 5.">
+    <meta name="author" content="William Zacher">
+    <link rel="stylesheet" href="styles/form.css">
+    <script defer src="scripts/form.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+            <label>
+                Product Name
+                <select name="product-name" id="product-name" required>
+                    <option value="" disabled>Choose a Product...</option>
+                </select>
+            </label>
+            <p>Overall Rating</p>
+            <div id="star-box">
+                <label>☆<input type="radio" name="rating" value="one-star" id="one-star" required></label>
+                <label>☆☆<input type="radio" name="rating" value="two-star" id="two-star" required></label>
+                <label>☆☆☆<input type="radio" name="rating" value="three-star" id="three-star" required></label>
+                <label>☆☆☆☆<input type="radio" name="rating" value="four-star" id="four-star" required></label>
+                <label>☆☆☆☆☆<input type="radio" name="rating" value="five-star" id="five-star" required></label>
+            </div>
+            <label>Date of Installation <input type="date" required id="date-install"></label>
+            <div>
+                <p>Which features did you find useful in the product?</p>
+                <label><input type="checkbox" name="Durability" value="useful-features">Durability</label>
+                <label><input type="checkbox" name="Ease of Use" value="useful-features">Ease of Use</label>
+                <label><input type="checkbox" name="Performance" value="useful-features">Performance</label>
+                <label><input type="checkbox" name="Design" value="useful-features">Design</label>
+            </div>
+            <label>Written Review <span class="optional">(Optional)</span>
+                <textarea id="written-review" name="written-review"></textarea></label>
+            <label>Your Name <span class="optional">(Optional)</span><input type="text" name="name-gift"
+                    id="name-gift"></label>
+            <input type="submit" value="Send Review">
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="current-year"></span> - William Zacher - United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
